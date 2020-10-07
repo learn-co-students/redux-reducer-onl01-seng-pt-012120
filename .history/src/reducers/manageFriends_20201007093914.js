@@ -10,9 +10,9 @@ export function manageFriends(state, action){
             }
                 
         case "REMOVE_FRIEND":
-            // console.log(action)
+            console.log(action)
             const afterList = state.friends.filter(friend=>friend.id!==action.id)
-            // console.log(afterList)
+            console.log(afterList)
             return {friends: afterList}            
     
         default:
