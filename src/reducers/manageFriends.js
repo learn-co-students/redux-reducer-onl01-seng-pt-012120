@@ -9,14 +9,17 @@ let action = {
       id: 1
     }
   }
-
-export function manageFriends(state, action){
+  
+  
+export function manageFriends(state = {friends:[]}, action){
     switch (action.type) {
       case 'ADD_FRIEND':
-        return Object.assign ({}, {friend : state.friend  + 1})
+        return Object.assign ({},state, {friends : [...state.friends, action.friend] })
       case 'REMOVE_FRIEND':
-        return Object.assign ({},   {friend : state.friend  - 1})
-        // return Object.assign ({}, friend,  {friend : state.friend  - 1})
+          let index = state.friends.findIndex((friend)=> friend.id === action.id ) 
+          
+        return Object.assign ({},state, {friends : [...state.friends.slice(0,index),...state.friends.slice(index +1)] })
+        
       default:
         return state;
     }
