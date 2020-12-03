@@ -1,15 +1,15 @@
 export function manageFriends(state, action){
-    action = {
-        type: "ADD_FRIEND",
-        friend: {
-          name: "Chrome Boi"
-          homewtown: "NYC",
-          id: 1
+
+    function reducer(state, action){      
+        switch (action.type) {
+          case 'ADD_FRIEND':
+            return {count: state.count + 1}
+          case 'REMOVE_FRIEND':
+            return {count: state.count - 1}
+          default:
+            return state;
         }
       }
 
-      action = {
-        type: "REMOVE_FRIEND",
-        id: 1
 
 }
