@@ -1,4 +1,4 @@
-# Reducers Lab
+# Reducers Lab commit
 
 ![reduce](https://media.giphy.com/media/3o7TKwxYkeW0ZvTqsU/giphy.gif)
 
